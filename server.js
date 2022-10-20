@@ -3,7 +3,6 @@ const app = express();
 const users = require('./controller/users')
 const images = require('./controller/images')
 const webCam = require('./controller/webCam')
-const userLocation = require('./controller/userLocation')
 const login = require('./controller/login')
 app.use(express.json());
 app.use(express.static('images'))
@@ -16,7 +15,6 @@ app.use(users)
 app.use(images)
 app.use(webCam)
 app.use(login)
-app.use(userLocation)
 
 // express server generated
 app.listen(process.env.PORT, ()=>{
